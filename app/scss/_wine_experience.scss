@@ -1,0 +1,73 @@
+.wine-experience {
+    background-color: $gunmetal;
+    color: $white;
+    line-height: 0;
+
+    @include breakpoint-up(xlarge) {
+        min-height: 92rem;
+        align-items: center;
+
+        &__pg-1, &__pg-2 {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    @include breakpoint-up(medium) {
+        .image-item {
+            padding-top: 2rem;
+            padding-bottom: 1.4375rem;  
+        }
+    }
+    @include breakpoint-down(small) {
+        .image-item {
+            margin-top: 2.5rem;
+        }
+    }
+
+    &__text {
+        @include breakpoint-up(xlarge) {
+            width: 28.75rem;
+            padding-right: 1.5rem;
+            flex: 1;
+
+            .text-box {
+                width: 80%;
+            }
+            p {
+                width: 80%;
+            }
+        }
+
+        @include breakpoint-down(small) {
+            text-align: center;
+        }
+    }
+
+    &__image {
+        @include breakpoint-up(xlarge) {
+            width: calc(100% - 28.75rem);
+            flex: 1;
+        }
+    }
+
+    &__pg-2 {
+        @include breakpoint-up(xlarge) {
+            .image-item {
+                flex: 1;
+
+                &:not(:last-child) {
+                    padding-right: 12.625rem;
+                }
+                
+                &:last-child {
+                    margin-top: 9.0625rem;
+                }
+                
+                &__portrait {
+                    height: 37.8125rem;
+                }
+            }
+        }
+    }
+}

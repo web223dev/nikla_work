@@ -1,0 +1,116 @@
+.checkout-wineries {
+    text-align: center;
+    min-height: 39.4375rem;
+    padding-top: 5rem;
+    padding-bottom: 5.4375rem;
+
+    @include breakpoint-down(small) {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+    
+    &, h1, h2, p, a {
+        color: $gunmetal;
+    }
+    h1 {
+        font-size: $font-lg;
+        margin-bottom: 1rem;
+        @include breakpoint-down(small){
+            font-size: $font-med;
+        }
+    }
+    h2 {
+        font-size: $font-smed;
+        font-weight: 400;
+        line-height: 1.15;
+        margin-bottom: 0.75rem;
+    }
+    p {
+        color: $coolGrey;
+
+        @include breakpoint-up(large) {
+            max-width: 36.25rem;
+            margin: 0 auto;
+        }
+    }
+
+    .container {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    &__intro {
+        margin-bottom: 2rem;
+    }
+
+    &__slider-box {
+        padding-top: 5rem;
+        padding-left: 6.375rem;
+        padding-bottom: 4rem;
+
+        @include breakpoint-up(xlarge) {
+            padding-left: 8.375rem;
+        }
+
+        .left-arrow {
+            position: absolute;
+            left: calc(50% - 7.375rem);
+            top: -5rem;
+        }
+
+        .right-arrow {
+            position: absolute;
+            top: -5rem;
+            left: calc(50% - 3.375rem);
+        }
+    }
+
+    &__mobile-wineries {
+        margin-bottom: 2rem;
+        .checkout-wineries__winery:not(:first-child){
+            margin-top: 1.4375rem;
+        }
+    }
+    
+    &__winery {
+        background-color: rebeccapurple;
+        width: 15.9375rem;
+        height: 7.5rem;
+        margin-left: 1.15625rem;
+        margin-right: 1.15625rem;
+        position: relative;
+        color: $white;
+
+        img {
+            object-fit: cover;
+            border-radius: 0.3125rem;
+        }
+
+        .info {
+            position: absolute;
+            font-weight: bold;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+
+            .location {
+                font-size: 0.875rem;
+                svg {
+                    margin-right: 0.5rem;
+                }
+            }
+            h3 {
+                line-height: 1.15;
+            }
+        }
+    }
+
+    &__link {
+        font-weight: bold;
+
+        svg {
+            margin-left: 0.5rem;
+        }
+    }
+}
